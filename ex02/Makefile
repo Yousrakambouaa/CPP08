@@ -1,14 +1,14 @@
-NAME = Span
+NAME = Mutated_abomination
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98  
 
-SRC = main.cpp Span.cpp
+SRC = main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
-HEADERS = Span.hpp
+HEADERS = MutantStack.hpp
 
 all: $(NAME)
 
@@ -27,3 +27,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
