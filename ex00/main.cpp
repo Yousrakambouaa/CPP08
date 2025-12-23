@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 04:58:18 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/01 05:28:12 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/23 21:44:11 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main(int ac, char **av)
 	try
 	{
 		it = easyfind(vect, -1);
-		// std::cout << "it value found: " << *it << std::endl;
+		std::cout << "it value found: " << *it << std::endl;
 	}
 	catch(std::runtime_error &e)
 	{
@@ -50,6 +50,7 @@ int main(int ac, char **av)
 	try
 	{
 		it_list = easyfind(listt, +3);
+		std::cout << "it value found: " << *it_list << std::endl;
 	}
 	catch(std::runtime_error &e)
 	{
@@ -66,6 +67,7 @@ int main(int ac, char **av)
 	try 
 	{
 		it_deq = easyfind(deq, -200);
+		std::cout << "it value found: " << *it_deq << std::endl;
 	}
 	catch (std::runtime_error &e) 
 	{
@@ -75,6 +77,7 @@ int main(int ac, char **av)
 	try 
 	{
 		it_deq = easyfind(deq, 8);
+		std::cout << "it value found: " << *it_deq << std::endl;
 	}
 	catch (std::runtime_error &e) 
 	{
