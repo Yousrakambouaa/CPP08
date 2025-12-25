@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 23:17:25 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/03 00:55:41 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/25 03:04:02 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,24 @@ class MutantStack : public std::stack<T>
 		};
 		
 		typedef typename std::stack<T>::container_type::iterator it;
+		typedef typename std::stack<T>::container_type::const_iterator const_it;
 		it begin()
 		{
 			return(this->c.begin());
-		};
+		}
 		it end()
 		{
 			return(this->c.end());
-		};
+		}
+
+		const_it begin() const
+		{
+			return (this->c.begin());
+		}
+		const_it end() const
+		{
+			return(this->c.end());
+		}
 };
 
 

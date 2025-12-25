@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:53:44 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/01 13:51:35 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/25 02:46:37 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		// sp.addNumber(121);
+		sp.addNumber(121);
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 		
@@ -60,7 +60,7 @@ int main()
 		vect.push_back(32353242);
 		vect.push_back(4);
 		vect.push_back(5);
-		vect.push_back(-0);
+		vect.push_back(0);
 		sp2.addNumbers(vect.begin(), vect.end());
 		std::cout << sp2.shortestSpan() << std::endl;
 		std::cout << sp2.longestSpan() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 04:58:18 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/23 21:44:11 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/25 02:14:53 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int main(int ac, char **av)
 	std::vector<int> vect;
 	vect.push_back(324);
 	vect.push_back(-1);
-	vect[2] = 0;
 	vect.push_back(0);
 	vect.push_back(5);
 	vect.push_back(7785856);
@@ -67,7 +66,7 @@ int main(int ac, char **av)
 	try 
 	{
 		it_deq = easyfind(deq, -200);
-		std::cout << "it value found: " << *it_deq << std::endl;
+		std::cout << "it deq value found: " << *it_deq << std::endl;
 	}
 	catch (std::runtime_error &e) 
 	{
@@ -83,5 +82,15 @@ int main(int ac, char **av)
 	{
 		std::cout << e.what() << std::endl;
 	}
-
+	std::cout << "\nconst conatinner : =========" << std::endl;
+	const std::vector<int> constVect(3, 5);
+	try
+	{
+		std::vector<int>::const_iterator it = easyfind(constVect, 5);
+		std::cout << "it const vect value : " << *it << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }

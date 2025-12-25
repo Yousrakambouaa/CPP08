@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 04:23:02 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/01 04:57:50 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/25 01:29:55 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 template<typename T>
 typename T::iterator easyfind(T& containner, int val);
 
+template<typename T>
+typename T::const_iterator easyfind(const T& containner, int val);
 #include "easyfind.tpp"
 #endif
 

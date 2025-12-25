@@ -6,7 +6,7 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 10:43:15 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/12/01 13:46:53 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/12/25 02:39:40 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 #include <stdexcept>
 #include <climits>
 #include <algorithm>
+#include <iterator>
 
 class Span
 {
 	private:
-		const unsigned int N;
+		unsigned int N;
 		std::vector<int>numbers;
 	public:
 		Span();
@@ -37,11 +38,10 @@ class Span
 		void addNumbers(It begin, It end)
 		{
 			if(numbers.size() + std::distance(begin, end) > N)
-				throw(std::runtime_error("cant add more numbers !!\n"));
+				throw(std::runtime_error("cant add more numbers !!"));
 			else
 				numbers.insert(numbers.end(), begin, end);
 		}
-		
 		int shortestSpan();
 		int longestSpan();
 		const std::vector<int>& getNumbers() const;
